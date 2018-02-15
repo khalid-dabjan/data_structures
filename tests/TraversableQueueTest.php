@@ -21,8 +21,8 @@ class TraversableQueueTest extends TestCase
         $this->traversableQueue = new TraversableQueue();
     }
 
-    /** @test */
-    public function it_can_be_traversed()
+
+    public function testTraversable()
     {
         $this->traversableQueue->enqueue(0);
         $this->traversableQueue->enqueue(1);
