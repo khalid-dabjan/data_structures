@@ -5,7 +5,7 @@ namespace src\Queues;
 
 class Queue
 {
-    protected $queue = [];
+    protected $items = [];
 
     /**
      * Returns the number of the items currently in the queue.
@@ -13,7 +13,7 @@ class Queue
      */
     public function count()
     {
-        return count($this->queue);
+        return count($this->items);
     }
 
     /**
@@ -31,7 +31,7 @@ class Queue
      */
     public function enqueue($item)
     {
-        $this->queue[] = $item;
+        $this->items[] = $item;
     }
 
     /**
@@ -40,6 +40,6 @@ class Queue
      */
     public function dequeue()
     {
-        return array_shift($this->queue);
+        return array_shift($this->items);
     }
 }

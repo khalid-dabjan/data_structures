@@ -21,7 +21,7 @@ class TraversableQueue extends Queue implements \Iterator
      */
     public function current()
     {
-        return $this->queue[$this->position];
+        return $this->items[$this->position];
     }
 
     /**
@@ -55,7 +55,7 @@ class TraversableQueue extends Queue implements \Iterator
      */
     public function valid()
     {
-        return isset($this->queue[$this->position]);
+        return isset($this->items[$this->position]);
     }
 
     /**
