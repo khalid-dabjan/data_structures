@@ -6,7 +6,7 @@
  * Time: 1:50 PM
  */
 
-//namespace tests;
+namespace tests;
 
 
 use PHPUnit\Framework\TestCase;
