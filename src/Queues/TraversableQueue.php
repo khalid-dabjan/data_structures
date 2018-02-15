@@ -32,7 +32,7 @@ class TraversableQueue extends Queue implements \Iterator
      */
     public function next()
     {
-        ++$this->position;
+        $this->position++;
     }
 
     /**
