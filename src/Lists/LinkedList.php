@@ -72,6 +72,24 @@ class LinkedList
         $current->next = null;
     }
 
+    public function deleteByValue($value)
+    {
+        if ($this->head === null) {
+            return;
+        }
+        if ($this->head->data === $value) {
+            $this->deleteHead();
+            return;
+        }
+        $current = $this->head;
+        $next = $current->next;
+        while ($current->next !== null && $current->next->data !== $value) {
+            $current = $current->next;
+            $next = $current->next;
+        }
+        $current->next = $next === null ? null : $next->next;
+    }
+
     private function isTail($node)
     {
         return $node->next === null;
